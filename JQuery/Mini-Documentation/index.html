@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+            //jquery codes
+			$("a.btn").click(function(){
+				$("img").show();
+				$("input:text").val("");
+				$(".para1").text("This is a paragraph.");
+				$(".para2").text("This is another paragraph.");
+				var methodLabel = $(this).attr("data-name");
+				var desc = $(".hide" , this).attr("data-description");
+				var sample = $(".hide" , this).text();
+				var link = $(this).attr("href");
+				$(".method").text(methodLabel + " Method");
+				$(".method-command").text(methodLabel);
+				$(".method-desc").text(desc);
+				$(".method-sample").text(sample);
+				$(".right-section p span").html("<a href =" +link+">" + link + "</a>").addClass("link");
+				if(methodLabel === ".fadeIn()"|| methodLabel === ".slideToggle()" || methodLabel === ".show()" || methodLabel === ".slideDown()") $("img").hide();
+			});
+			$(".btn-method").click(function(){
+				$("i").remove();
+				$("b").remove();
+				switch($(".btn-method").text()){
+					case ".hide()": {
+						$("img").hide();
+						break;	
+					}
+					case ".show()": {
+						$("#img1").show();
+    					$("#img2").show("slow");
+    					$("#img3").show(1000);	
+						break;
+					}
+					case ".toggle()": {
+						$("#img1").toggle();
+    					$("#img2").toggle("slow");
+    					$("#img3").toggle(1000);	
+						break;
+					}
+					case ".slideUp()": {
+						$("#img1").slideUp();
+    					$("#img2").slideUp("slow");
+    					$("#img3").slideUp(1000);	
+						break;
+					}
+					case ".slideDown()": {
+						$("#img1").slideDown();
+    					$("#img2").slideDown("slow");
+    					$("#img3").slideDown(1000);	
+						break;
+					}
+					case ".slideToggle()": {
+						$("#img1").slideToggle();
+    					$("#img2").slideToggle("slow");
+    					$("#img3").slideToggle(1000);	
+						break;
+					}
+					case ".fadeOut()": {
+						$("#img1").fadeOut();
+    					$("#img2").fadeOut("slow");
+    					$("#img3").fadeOut(1000);	
+						break;
+					}
+					case ".fadeIn()": {
+						$("#img1").fadeIn();
+    					$("#img2").fadeIn("slow");
+    					$("#img3").fadeIn(1000);	
+						break;
+					}
+					case ".append()": {
+						$(".para").append("Some text append.");
+						break;
+					}
+					case ".prepend()": {
+						$(".para").prepend("Some text prepend.");
+						break;
+					}
+					case ".after()": {
+						$("img").after("<i>After</i>");
+						break;
+					}
+					case ".before()": {
+						$("img").before("<b>Before</b>");
+						break;
+					}
+					case ".attr()": {
+						var dataName = $("#img1").attr("alt");
+						$(".para1").text("The alt='' name for image1 HTML is: " + dataName);
+						break;
+					}
+					case ".html()": {
+						$(".para1").html($(".para2").html()).val();
+						$(".para2").html("Hello <b>world!</b>");
+						break;
+					}
+					case ".text()": {
+						$(".para1").text("Hello world!");
+						$(".para2").text("Hello <b>world!</b>");
+						break;
+					}
+					case ".val()": {
+						$("input:text").val("Hello world!");
+						break;
+					}
+					case ".click()": {
+						alert("The button was Clicked!")
+						break;
+					}
+					case ".on()": {
+						alert("can now click img");
+						$("img").on("click",function(){
+							alert("The img was Clicked! event used 'click'");
+						} );
+						break;
+					}
+					case ".hover()": {
+						alert("Point your mouse at the images");
+						$("img").hover(function(){ 
+							$("img").fadeOut();
+							$("img").fadeIn(1000);
+						},function(){ 
+							$("img").show();
+						});
+						break;
+					}
+					case ".css()": {
+						alert("Image Height = Height of img1 is " + $("#img1").css("height"));
+						break;
+					}
+					case ".addClass()": {
+						alert("added class '.para-color', to <p>This is a paragraph.</p> to change the color.");
+						$(".para1").addClass("para-color");
+						$("input:text").val("Css: .para-color{color: red;}");
+						break;
+					}
+					case ".removeClass()": {
+						$(".para1").addClass("para-color");
+						alert("remove class '.para-color', from <p>This is a paragraph.</p>.");
+						$(".para1").removeClass("para-color");
+						$("input:text").val("Class .para-color removed");
+						break;
+					}
+					default:
+				}
+			});
+
+		//This is the default load.
+		var methodLabel = $(".onload").attr("data-name");
+		var desc = $(".hide" , ".onload").attr("data-description");
+		var sample = $(".hide" , ".onload").text();
+		var link = $(".onload").attr("href");
+		$(".method").text(methodLabel + " Method");
+		$(".method-command").text(methodLabel);
+		$(".method-desc").text(desc);
+		$(".method-sample").text(sample);
+		$(".right-section p span").html("<a href =" +link+">" + link + "</a>").addClass("link");
+        });
+
+    </script>
+    <title>Mini Documentation: jQuery</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-section">
+			<h2>jQuery Category</h2>
+			<h3>Effects</h3>
+			<p>functions to do some cool animation effects</p>
+			<a class ="onload btn" href="https://api.jquery.com/hide/" onclick="return false" data-name = ".hide()">.hide()
+				<pre class="hide" hidden data-description="Description: Hide the matched elements. ">
+Syntax:
+$( ".target" ).hide();
+
+$(selector).hide(speed,callback);
+______________________________________
+sample code:
+$("#hide").click(function(){
+	  $("p").hide();
+});
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/show/" onclick="return false" data-name = ".show()">.show()
+				<pre class="hide" hidden data-description="Description: Display the matched elements.">
+Syntax:
+$( ".target" ).show();
+
+$(selector).show(speed,callback);
+______________________________________
+sample code:
+$("button").click(function(){
+	$("p").show(1000);
+  }); 
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/toggle/" onclick="return false" data-name = ".toggle()">.toggle()
+				<pre class="hide" hidden data-description="Description: Display or hide the matched elements.">
+Syntax:
+$(selector).toggle(function) 
+______________________________________
+sample code:
+
+$( ".target" ).toggle();
+
+$( "#clickme" ).click(function() {
+	$( "#book" ).toggle( "slow", function() {
+	  // Animation complete.
+	});
+  });
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/slideUp/" onclick="return false" data-name = ".slideUp()">.slideUp()
+				<pre class="hide" hidden data-description="The jQuery slideUp() method is used to slide up an element.">
+Syntax:
+$(selector).slideUp(speed,callback);
+______________________________________
+sample code:
+
+$("#panel").slideUp();
+
+$("#flip").click(function(){
+    $("#panel").slideUp("slow");
+  });
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/slideDown/" onclick="return false" data-name = ".slideDown()">.slideDown()
+				<pre class="hide" hidden data-description="The jQuery slideDown() method is used to slide down an element.">
+Syntax:
+$(selector).slideDown(speed,callback);
+______________________________________
+sample code:
+
+$("#panel").slidedown();
+
+$("#flip").click(function(){
+    $("#panel").slidedown("slow");
+  });
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/slideToggle/" onclick="return false" data-name = ".slideToggle()">.slideToggle()
+				<pre class="hide" hidden data-description="The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+
+				If the elements have been slid down, slideToggle() will slide them up.
+				
+				If the elements have been slid up, slideToggle() will slide them down. ">
+Syntax:
+$(selector).slideToggle(speed,callback);
+______________________________________
+sample code:
+$("#flip").click(function(){
+	$("#panel").slideToggle();
+  }); 
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/fadeOut/" onclick="return false" data-name = ".fadeOut()">.fadeOut()
+				<pre class="hide" hidden data-description="With jQuery you can fade elements in and out of visibility. The jQuery fadeOut() method is used to fade out a hidden element.">
+Syntax:
+$(selector).fadeOut(speed,callback);
+______________________________________
+sample code:
+$("button").click(function(){
+	$("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  }); 
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/fadeIn/" onclick="return false" data-name = ".fadeIn()">.fadeIn()
+				<pre class="hide" hidden data-description="With jQuery you can fade elements in and out of visibility. The jQuery fadeIn() method is used to fade in a hidden element.">
+Syntax:
+$(selector).fadeIn(speed,callback);
+______________________________________
+sample code:
+$("button").click(function(){
+	$("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  }); 
+				</pre>
+			</a>
+			<h3>CSS</h3>
+			<p>adding or removing a class for any HTML element/DOM</p>
+			<a class ="btn" href="https://api.jquery.com/addClass/" onclick="return false" data-name = ".addClass()">.addClass()
+				<pre class="hide" hidden data-description="Description: Adds the specified class(es) to each element in the set of matched elements.">
+Syntax:
+.addClass( className );
+
+.addClass( "myClass yourClass" );
+______________________________________
+sample code:
+$( "p" ).addClass( "myClass yourClass" );
+
+$("button").click(function(){
+	  $("h1, h2, p").addClass("blue");
+	  $("div").addClass("important");
+}); 
+
+$("button").click(function(){
+	$("#div1").addClass("important blue");
+});
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/removeClass/" onclick="return false" data-name = ".removeClass()">.removeClass()
+				<pre class="hide" hidden data-description="Description: Remove a single class or multiple classes from each element in the set of matched elements.">
+Syntax:
+.removeClass( className )
+.removeClass( classNames )
+.removeClass( function )
+.removeClass( function )
+______________________________________
+sample code:
+$( "p" ).removeClass( "myClass yourClass" )
+
+$( "p" ).removeClass( "myClass noClass" ).addClass( "yourClass" ); 
+
+$( "li" ).last().removeClass(function() {
+    return $( this ).prev().attr( "class" );
+  });
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/css/" onclick="return false" data-name = ".css()">.css()
+				<pre class="hide" hidden data-description="Description: Get the computed style properties for the first element in the set of matched elements.">
+Syntax:
+.css( propertyName )
+css("propertyname","value");
+css({"propertyname":"value","propertyname":"value",...});
+______________________________________
+sample code:
+$("p").css("background-color");
+
+$("p").css("background-color", "yellow");
+
+$("p").css({"background-color": "yellow", "font-size": "200%"});
+				</pre>
+			</a>
+			<h3>Manipulation</h3>
+			<p>retrieving or setting value or text in any HTML element</p>
+			<a class ="btn" href="https://api.jquery.com/after/" onclick="return false" data-name = ".after()">.after()
+				<pre class="hide" hidden data-description="Description: Insert content, specified by the parameter, after each element in the set of matched elements.">
+Syntax:
+.after( content [, content ] )
+.after( function )
+.after( function-html )
+______________________________________
+sample code:
+$( ".inner" ).after( "&lt;p&gt;Test&lt;p&gt;" );
+
+$( ".container" ).after( $( "h2" ) );
+
+$( "p" ).after( document.createTextNode( "Hello" ) );
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/append/" onclick="return false" data-name = ".append()">.append()
+				<pre class="hide" hidden data-description="Description: Insert content, specified by the parameter, to the end of each element in the set of matched elements.">
+Syntax:
+.append( content [, content ] )
+.append( function )
+______________________________________
+sample code:
+$( ".inner" ).append( "&lt;p&gt;Test&lt;p&gt;" );
+
+$( ".container" ).append( $( "h2" ) );
+
+$( "p" ).append( document.createTextNode( "Hello" ) );
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/prepend/" onclick="return false" data-name = ".prepend()">.prepend()
+				<pre class="hide" hidden data-description="Description: Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.">
+Syntax:
+.prepend( content [, content ] )
+.prepend( function )
+______________________________________
+sample code:
+$( ".inner" ).prepend( "&lt;p&gt;Test&lt;p&gt;" );
+
+$( ".container" ).prepend( $( "h2" ) );
+
+$( "p" ).prepend( document.createTextNode( "Hello" ) );
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/attr/" onclick="return false" data-name = ".attr()">.attr()
+				<pre class="hide" hidden data-description="Description: Get the value of an attribute for the first element in the set of matched elements.">
+Syntax:
+.attr( attributeName )
+	.attr( attributeName )
+.attr( attributeName, value )
+	.attr( attributeName, value )
+	.attr( attributes )
+	.attr( attributeName, function )
+	______________________________________
+sample code:
+var title = $( "em" ).attr( "title" );
+$( "div" ).text( title );
+
+$("button").click(function(){
+	$("img").attr("width","500");
+  });
+
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/before/" onclick="return false" data-name = ".before()">.before()
+				<pre class="hide" hidden data-description="Description: Insert content, specified by the parameter, before each element in the set of matched elements.">
+Syntax:
+$(selector).before(content,function(index))
+	______________________________________
+sample code:
+$( ".inner" ).before( "&lt;p&gt;Test&lt;p&gt;" );
+
+$( ".container" ).before( $( "h2" ) );
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/html/" onclick="return false" data-name = ".html()">.html()
+				<pre class="hide" hidden data-description="Description: Get the HTML contents of the first element in the set of matched elements.">
+Syntax:
+$(selector).html()
+$(selector).html(content)
+$(selector).html(function(index,currentcontent))
+	______________________________________
+sample code:
+$( "div.demo-container" ).html();
+
+$("button").click(function(){
+	  $("p").html( "&lt;p&gt;Test&lt;p&gt;" );
+	});
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/text/" onclick="return false" data-name = ".text()">.text()
+				<pre class="hide" hidden data-description="Description: Get the combined text contents of each element in the set of matched elements, including their descendants.">
+Syntax:
+$(selector).text()
+$(selector).text(content)
+$(selector).text(function(index,currentcontent))
+	______________________________________
+sample code:
+$( ".demo-container" ).text();
+
+$("button").click(function(){
+	$("p").text("Hello world!");
+});
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/val/" onclick="return false" data-name = ".val()">.val()
+				<pre class="hide" hidden data-description="Description: Get the current value of the first element in the set of matched elements">
+Syntax:
+$(selector).val()
+$(selector).val(value)
+$(selector).val(function(index,currentvalue))
+	______________________________________
+sample code:
+$( "select#foo" ).val();
+
+$( "input" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  })
+  .keyup();
+
+$("button").click(function(){
+	  $("input:text").val("Glenn Quagmire");
+});
+				</pre>
+			</a>
+			<h3>Events</h3>
+			<p>functions to handle an event</p>
+			<a class ="btn" href="https://api.jquery.com/click/" onclick="return false" data-name = ".click()">.click()
+				<pre class="hide" hidden data-description="Description: Get the current value of the first element in the set of matched elements">
+Syntax:
+$(selector).click()
+$(selector).click(function)
+	______________________________________
+sample code:
+$( "p" ).click();
+
+$("p").click(function(){
+	  alert("The paragraph was clicked.");
+}); 
+
+$( "#target" ).click(function() {
+	alert( "Handler for .click() called." );
+  });
+
+$( "#other" ).click(function() {
+	$( "#target" ).click();
+});
+
+$( "p" ).click(function() {
+	$( this ).slideUp();
+});
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/on/" onclick="return false" data-name = ".on()">.on()
+				<pre class="hide" hidden data-description="Description: Attach an event handler function for one or more events to the selected elements.">
+Syntax:
+$(selector).on(event,childSelector,data,function,map) 
+	______________________________________
+sample code:
+$( "#dataTable tbody tr" ).on( "click", function() {
+	console.log( $( this ).text() );
+});
+
+$("p").on("click", function(){
+	alert("The paragraph was clicked.");
+}); 
+
+function notify() {
+	alert( "clicked" );
+  }
+  $( "button" ).on( "click", notify );
+				</pre>
+			</a>
+			<a class ="btn" href="https://api.jquery.com/hover/" onclick="return false" data-name = ".hover()">.hover()
+				<pre class="hide" hidden data-description="Description: Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.">
+Syntax:
+.hover( handlerIn, handlerOut )
+.hover( handlerInOut )
+	______________________________________
+sample code:
+$( "li" ).hover(
+  function() {
+    $( this ).append( $( "&lt;span&gt; ***&lt;span&gt;" ) );
+  }, function() {
+    $( this ).find( "span" ).last().remove();
+  }
+);
+ 
+$( "li.fade" ).hover(function() {
+  $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );
+});
+
+$( "td" ).hover(
+  function() {
+    $( this ).addClass( "hover" );
+  }, function() {
+    $( this ).removeClass( "hover" );
+  }
+);
+				</pre>
+			</a>
+        </div>
+        <div class="right-section">
+			<h1>My Mini Documentation</h1>
+			<h2 class="method">METHOD HERE</h2>
+			<p class="method-command">.method()</p>
+			<p class="method-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam vero veritatis, nesciunt architecto odio expedita ipsa numquam aperiam libero laboriosam!</p>
+			<h3>Syntax and Sample Code</h3>
+			<pre class="method-sample">
+			</pre>
+			<p>See more. <span></span></p>
+			<a href="#" onclick="return false" data-name="btn-method" class="btn-method method-command">.on() Click me</a>
+			<div class="sample-container">			
+				<h3>Demonstrate <span class="method-command"></span> Method</h3>
+				<img src="img/HTML.png" alt="Html-image" id="img1">
+				<img src="img/JavaScript.png" alt="JavaScript-image" id="img2">
+				<img src="img/jQuery.png" alt="jQuery-image" id="img3">
+				<p class="para para1">This is a paragraph. </p>
+				<p class="para para2">This is another paragraph.</p><input type="text" value="">
+			</div>
+        </div>
+    </div>
+</body>
+</html>

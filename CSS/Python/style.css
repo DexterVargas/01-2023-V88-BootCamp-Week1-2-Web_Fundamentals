@@ -1,0 +1,201 @@
+*, body {
+	font-family: Tahoma, sans-serif;
+	color: #e6e8ea;
+}
+.main-container {
+	width: 1239px;
+	height: 940px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.main-container, .btn-go, .active {
+	background-color: #2b5b84;
+}
+header{
+	box-sizing: border-box;
+	height: 90px;
+	width: auto;
+	margin: 20px 20px 20px 20px;
+}
+header a{
+	display: inline-block;
+}
+.logo-holder{
+	height: 100%;
+}
+.logo{
+	height: 100%;
+	margin-left: 20px;
+	vertical-align: middle;
+}
+.btn-donate {
+	border-radius: 5px;
+	background-color: #ffd54e;
+	border: none;
+	color: #676868;
+	padding: 3px 12px 5px 12px;
+	margin-right: 5px;
+	margin-left: 410px;
+}
+.search-container{
+	display: inline-block;
+	background-color: #1e2933;
+	width: 325px;
+	height: 50px;
+	padding-left: 20px;
+	padding-right: 15px;
+	border-radius: 8px;
+	vertical-align: middle;
+}
+.search {
+	width: 180px;
+	color: #bcbdbd;
+	margin-right: 5px;
+}
+.btn-go {
+	border-radius: 8px;
+	font-size: 1em;
+	text-align: center;
+	padding:  8px 10px ;
+	margin-right: 5px;
+}
+.btn-social{
+	height: 100%;
+	margin: 0px;
+	padding-left: 10px;
+	border-left: 2px solid #01060a;
+	line-height: 50px;
+}
+.navbar{
+	height: 50px;
+	padding: 0px;
+	margin: 0px 20px;
+	border-radius: 10px;
+	text-align: center;
+	background-color: #4376a2;
+	border: 1px solid #3776ab;
+}
+.navbar li{
+	display: inline-block;
+	height: 100%;
+	padding: 0px 25px;
+	border-right: 1px solid #2b5b84;
+	font-size: 1.1em;
+	line-height: 50px;
+}
+a {
+	text-decoration: none;
+}	
+.landing-section {
+	position: relative;
+	height: 255px;
+	padding-top: 40px;
+}
+.landing-section p {
+	width: 30%;
+	color: #ffd54e;
+	margin: 0px;
+	font-size: 1.5em;
+	line-height: 1.5;
+	padding-left: 140px;
+	font-weight: 700;
+}
+p.reason-to-use {
+	width: 30%;
+	color: #bcbdbd;
+	margin: 0px;
+	font-size: .9em;
+	padding-left: 140px;
+	margin-top: 20px;
+}
+.landing-section img {
+	position: absolute;
+	top: 0px;
+	right: 100px;
+}
+.news-section {
+	box-sizing: border-box;
+	background-color: #fbfbfb;
+	height: 320px;
+	padding: 1px 30px 0px 30px;
+}
+.news-container, .python-for-container {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 49%;
+	margin-top: 10px;
+	vertical-align: top;
+	border-top: 4px solid #629ccd;
+	padding: 10px 30px 0px 15px;
+}
+.python-for-container {
+	margin-left: 18px;
+}
+.news-container p, .python-for-container p {
+	font-size: .8em;
+	color: #000000;
+	border-top: 1px solid #a8a8a8;
+	padding: 8px 0px 8px 0px;
+}
+.for-more, .for-title {
+	display: inline-block;
+	width: 48%;
+}
+.news-container p a {
+	margin-left: 35px;
+	color: #2b5b84;
+}
+.python-for-container p a {
+	padding: 3px 4px;
+	background-color: #e6e8ea;
+	font-weight: 100;
+	color: #676868;
+}
+p.for-title,p.for-title {
+	margin-left: 5px;
+	font-size: 1.1em;
+	color: #1e2933;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-top: none;
+}
+p.for-more,p.for-more , p.for-more a{
+	text-align: right;
+	font-size: .9em;
+	color: #bcbcbc;	
+	background-color: transparent;
+}
+footer,.main-container{
+	background: rgb(28, 70, 106);
+	background: linear-gradient(180deg, rgba(28, 70, 106, 1) 0%, rgba(43, 91, 132, 1) 63%, rgba(67, 118, 162, 1) 100%);
+}
+footer p {
+	padding-top: 30px;
+	text-align: center;	
+	font-size: 1em;
+	margin: 0px;
+}
+footer p span a,footer p span{
+	color: #89b4d9;
+}
+.legal span {
+	font-size: .7em;
+}
+.help span{
+	margin-left: 25px;
+}
+.legal span a {
+	text-decoration: underline dotted;
+}
+span.status {
+	display: inline-block;
+	margin-left: 5px;
+	height: 12px;
+	width: 12px;
+	background-color: green;
+	border-radius: 50%;
+}
+.btn-go, .navbar {
+	background: rgb(28, 70, 106);
+	background: linear-gradient(0deg, rgba(28, 70, 106, 1) 0%, rgba(43, 91, 132, 1) 20%, rgba(67, 118, 162, 1) 100%);
+}

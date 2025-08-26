@@ -1,0 +1,92 @@
+* {
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: 'Segoe UI', sans-serif;
+	background-color: beige;
+}
+
+.main-container {
+	width: 665px;
+	height: 345px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.head-container {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+}
+
+.head-container h1 {
+	box-sizing: border-box;
+	display: inline-block;
+	font-size: 2rem;
+	font-weight: bold;
+	vertical-align: 10px;
+	padding: 0px 130px;
+}
+
+.head-container img {
+	box-sizing: border-box;
+	display: inline-block;
+	height: 60px;
+	width: 120px;
+}
+
+.calendar-container {
+	box-sizing: border-box;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.calendar-container div {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 84px;
+	height: 38px;
+	border: 2px solid gray;
+	border-style: groove;
+	padding: 5px 10px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 3px 4px;
+}
+
+.calendar-container div.day {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.calendar-container div.first {
+	background-color: #5b9bd5;
+	font-weight: bold;
+}
+
+.calendar-container div.last {
+	background-color: #a9d08e;
+	font-weight: bold;
+}
+
+.calendar-container div.empty {
+	background-color: #e7e6e6;
+	border: 2px solid #e7e6e6;
+}
+
+.calendar-container div.last {
+	margin-right: 0px;
+}
+
+.calendar-container div.first {
+	margin-left: 0px;
+}

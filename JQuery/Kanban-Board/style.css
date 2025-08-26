@@ -1,0 +1,56 @@
+
+
+.task-container{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 20%;
+    border: 1px solid #333;
+    text-align: center;
+    overflow: scroll;
+    vertical-align: top;
+    min-height: 600px;
+}
+.kanban-task{
+    margin: 0 auto;
+    border: 1px solid #333;
+    margin-bottom: 5px;
+    background-image: url("img/memo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px; 
+    height: 250px; 
+    overflow: scroll; 
+}
+h3,h4,img{
+    margin: 0px;
+    padding: 0px;
+}
+.user{
+    background-color: rgba(255, 250, 240,.7);
+    height: auto;
+}
+img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.kanban-task h2{
+    padding-top: 10px;
+}
+.to-do-container{
+background-color: aliceblue;
+}
+.in-progress-container{
+    background-color:aquamarine;
+}
+.for-approval-container{
+    background-color:cadetblue;
+}
+.testing-container{
+    background-color:coral;
+}
+.done-container{
+    background-color:bisque;
+}

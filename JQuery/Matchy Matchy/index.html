@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+              
+            $("img").click(function(){
+                var defaultSrc = $(this).attr("src");
+                $(this).attr("src",$(this).attr("data-alt-src")).attr("data-alt-src",defaultSrc);
+            });		
+        });
+    </script>
+    <title>Matchy Matchy</title>
+</head>
+<body>
+    <div class="main-container">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/HTML.png">
+		<img src="img/default.png" alt="Default-Image" data-alt-src="img/bootstrap.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/HTML.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/JavaScript.png">
+		<img src="img/default.png" alt="Default-Image" data-alt-src="img/HTML.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/JavaScript.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/jQuery.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/HTML.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/JavaScript.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/jQuery.png">
+		<img src="img/default.png" alt="Default-Image" data-alt-src="img/php.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/bootstrap.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/jQuery.png">
+		<img src="img/default.png" alt="Default-Image" data-alt-src="img/php.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/bootstrap.png">
+        <img src="img/default.png" alt="Default-Image" data-alt-src="img/JavaScript.png">
+        </div>
+    </div>
+</body>
+</html>

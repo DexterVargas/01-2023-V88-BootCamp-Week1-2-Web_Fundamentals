@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<title>Kanban Board</title>
+		<script>
+			$(document).ready(function(){
+				$( ".task-container" ).sortable({
+					appendTo: document.body,
+					connectWith:".task-container",
+					containment: "document"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="task-container to-do-container">
+				<h1>To-do List</h1>
+				<div class="kanban-task">
+					<h2>Learn Javascript</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Junior Developer:</h3>  
+						<h4>Ichigo</h4>
+						<img src="img/ichigo.jpg" alt="User ichi">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>PHP Update</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Senior Developer:</h3>  
+						<h4>Saitama</h4>
+						<img src="img/saitama.png" alt="User saitama">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>Learn jQuery UI</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Junior Developer:</h3>  
+						<h4>Anya</h4>
+						<img src="img/anya.jpg" alt="User anya">
+					</div>
+				</div>
+			</div><!--
+		---><div class="task-container in-progress-container">
+				<h1>In-Progress</h1>
+				<div class="kanban-task">
+					<h2>Jquery Assignment</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Mid Developer:</h3>  
+						<h4>Luffy</h4>
+						<img src="img/luffy.jpg" alt="User luffy">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>Html/CSS refactor</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Junior Developer:</h3>  
+						<h4>Anya</h4>
+						<img src="img/anya.jpg" alt="User anya">
+					</div>
+				</div>
+			</div><!--
+		---><div class="task-container for-approval-container">
+				<h1>For-Approval</h1>
+				<div class="kanban-task">
+					<h2>PHP Documentation Assignment</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Senior Developer:</h3>  
+						<h4>Saitama</h4>
+						<img src="img/saitama.png" alt="User saitama">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>Python refactored</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Senior Developer:</h3>  
+						<h4>Saitama</h4>
+						<img src="img/saitama.png" alt="User saitama">
+					</div>
+				</div>
+			</div><!--
+		---><div class="task-container testing-container">
+				<h1>Testing</h1>
+				<div class="kanban-task">
+					<h2>Form Input</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Mid Developer:</h3>  
+						<h4>Luffy</h4>
+						<img src="img/luffy.jpg" alt="User luffy">
+					</div>
+				</div>
+			</div><!--
+		---><div class="task-container done-container">
+				<h1>Done</h1>
+				<div class="kanban-task">
+					<h2>Basic HTML</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Finished</h3>  
+						<h4>-----</h4>
+						<img src="img/memo.jpg" alt="User none">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>Basic Blogger Page</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Finished</h3>  
+						<h4>-----</h4>
+						<img src="img/memo.jpg" alt="User none">
+					</div>
+				</div>
+				<div class="kanban-task">
+					<h2>PIQ Exam</h2>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, iste?</p>
+					<div class="user">
+						<h3>Finished</h3>  
+						<h4>-----</h4>
+						<img src="img/memo.jpg" alt="User none">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

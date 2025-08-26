@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Zebra-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<script
+		src="https://cdn.jsdelivr.net/npm/zebra_tooltips@latest/dist/zebra_tooltips.min.js"></script>
+		<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/zebra_tooltips@2.1.0/dist/css/default/zebra_tooltips.min.css">
+		<!--jQuery UI-->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+		<!--Serials Scrolling-->
+		<script src="script/serialscrolling/jquery.serialscrolling.js"></script>
+		<script src="script/serialscrolling/jquery.serialscrolling.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Cool Plugins</title>
+		<script>
+			$(document).ready(function() {
+			//zebra
+			new $.Zebra_Tooltips($('.tooltips'));
+			new $.Zebra_Tooltips($('.zebra_tooltips_left_below'), {
+        		position:   'left',
+        		vertical_alignment: 'below'
+    		});
+			new $.Zebra_Tooltips($('.zebra_tooltips_right_below'), {
+        		position:           'right',
+        		vertical_alignment: 'below'
+    		});
+			new $.Zebra_Tooltips($('.zebra_tooltips_html_content'), {
+        		position:           'right',
+        		vertical_alignment: 'below'}
+				);
+			//UI
+			setInterval(() => {
+				$(".iam-saitama").effect("slide",5000).text("I'm Sai Tama Sila.").effect( "drop", 5000,function(){
+					$(this).text("Class B HERO desu.").show().effect("slide",5000).effect( "drop", 5000);
+				});
+				$(".quotes").effect( "bounce", "slow");
+			}, 20000);
+			$( ".profile-pic, .about-photo" ).click(function(){
+				$(this).effect( "bounce", "slow" );
+			});
+			//Serial scrooling
+			$('[data-serialscrolling]').serialscrolling();
+			});
+		</script>
+    </head>
+    <body>
+		<div class="main-container">
+			<div class="logo-container" data-serialscrolling-target="home">
+				<p><a href="#">Sai <span class="logo-name">Tama</span></a> </p> 
+			</div><!--
+		 --><ul class="navbar">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Blogs</a></li>
+			</ul>
+			<!--jQuery Plugins-->
+			<ul id="side-navbar">
+				<li><span class="sub-link" data-serialscrolling="home">Home</span></li>
+				<li><span class="sub-link" data-serialscrolling="about">About</span></li>
+				<li><span class="sub-link" data-serialscrolling="services">Services</span></li>
+				<li><span class="sub-link" data-serialscrolling="projects">Projects</span></li>
+				<li><span class="sub-link" data-serialscrolling="blogs">Blogs</span></li>
+			</ul>
+			<section class="user-section">
+				<div class="name-container">
+					<h1 class="iam-saitama">I'm Sai Tama Sila.</h1>
+					<p>Aspiring Frontend Developer</p>
+					<a href="#"        class="zebra_tooltips_html_content btn-talk"
+					title="&lt;p&gt;My tech stack!&lt;/p&gt;
+					&lt;img src=&quot;img/ajax.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/bootstrap.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/codeigniter.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/codepen.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/c-sharp.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/d3.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/django.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/github.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/html.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/iOS-Swift.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/JavaScript.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/jQuery.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/LAMP.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/materialize.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/MEAN.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/mongodb.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/mysql.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/php.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/RUBY.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/python.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/socket.png&quot; height=&quot;20&quot;&gt;
+					&lt;img src=&quot;img/sqlite.png&quot; height=&quot;20&quot;&gt;
+					">Let's talk</a>
+					<p class="social-media"><a href="#"
+						class="zebra_tooltips_left_below"
+						title="Lorem ipsum dolor sit amet consectetur adipisicing elit.LINK me UP in CODEPEN..LINK me UP in CODEPEN..LINK me UP in CODEPEN..LINK me UP in CODEPEN."><img src="img/codepen.png" alt="social-media"></a><a href="#" class="zebra_tooltips_left_below"
+						title="Lorem ipsum dolor sit amet consectetur adipisicing elit.Fork me on GitHub..Fork me on GitHub.Fork me on GitHub.Fork me on GitHub."><img src="img/github.png" alt="github-media"></a><a href="#" class="zebra_tooltips_right_below"
+						title="Lorem ipsum dolor sit amet consectetur adipisicing elit.Link Me. linkedin Me"><img src="img/linkedin.png" alt="link-media"></a><a href="#" class="zebra_tooltips_right_below"
+						title="Lorem ipsum dolor sit amet consectetur adipisicing elit.Tweet wteet birdy birdy"><img src="img/twitter.png" alt="twit-social-media"></a>
+					</p>
+				</div>
+				<div class="profile-img-container">
+					<div class="line-layer"></div>
+					<img class="profile-pic" src="img/saitama.png" alt="saitama-profile-photo">
+				</div>
+			</section>
+			<h2 class="quote" data-serialscrolling-target="about">“CODE is read more than it is written.”</h2> 
+			<section class="about-section">
+				<div class="about-photo-border">
+					<img class="about-photo" src="img/saitama-photo.png" alt="saitama-profile-photo">
+				</div>
+				<div class="about">
+					<h2>About</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio excepturi delectus in commodi cumque assumenda expedita aut dolores ad eum......</p>
+					<p><a href="#" class="read-more">Read more&#187;</a></p>
+				</div>
+			</section>
+			<h2 class="service-title" data-serialscrolling-target="services">&#171;Services&#187;</h2> 
+			<section class="services-section">
+				<div class="services">
+					<img src="img/HTML.png" height="50px">
+					<h3>Web Development</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+				</div>
+				<div class="services">
+					<img src="img/python.png" height="50px">
+					<h3>Web App Design</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+				</div>
+				<div class="services">
+					<img src="img/mysql.png" height="50px">
+					<h3>Database Integration</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+				</div>
+			</section>
+			<section class="projects-section" data-serialscrolling-target="projects">
+				<h2>&#171;Latest Projects/Works&#187;</h2> 
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error libero, nulla quisquam fugit perspiciatis laborum tempora, magni placeat hic qui fugiat laudantium id ad nam velit sapiente culpa earum quidem ex ipsa sit in suscipit, illo omnis. Nostrum deserunt consequatur pariatur, aut libero iste ipsa numquam maiores, exercitationem, id optio.</p>
+				<div class="works">
+					<h3>Basic HTML</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="works">	
+					<h3>Basic CSS</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="works">
+					<h3>PHP Documentation</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="works">
+					<h3>Python Website Clone</h3>					
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta molestiae ratione commodi, rerum doloribus animi tenetur explicabo in sapiente.</p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+			</section>
+			<section class="blogs-section" data-serialscrolling-target="blogs">
+				<h2>&#171;BLOGS&#187;</h2> 
+				<div class="blogs">
+					<p><img src="img/blog.png" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="blogs">
+					<p><img src="img/blog2.png" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="blogs">
+					<p><img src="img/blog3.png" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="blogs">
+					<p><img src="img/blog4.jpg" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="blogs">
+					<p><img src="img/blog5.jpg" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+				<div class="blogs">
+					<p><img src="img/blog6.png" alt="blog post"></p>
+					<h5>Article Title</h5>					
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nisi! </p>
+					<a href="#" class="read-blogs">Read more&#187;</a>
+				</div>
+			</section>
+			<footer>
+				<p><a href="#"><img src="img/codepen.png" alt="social-media"></a><a href="#"><img src="img/github.png" alt="github-media"></a><a href="#"><img src="img/linkedin.png" alt="link-media"></a><a href="#"><img src="img/twitter.png" alt="twit-social-media"></a></p>
+				<p>&copy;Sai Tama. All Rights Reserved</p>
+			</footer>
+        </div>
+    </body>
+</html>
+
+<!--
+				            <div class="fotorama">
+            <img src="img/w175 (1).png" alt="">
+            <img src="img/w175 (2).png" alt="">
+            <img src="img/w175 (3).png" alt="">
+            <img src="img/w175 (4).png" alt="">
+            <img src="img/w175 (5).png" alt="">
+            <img src="img/w175 (6).png" alt="">
+            <img src="img/w175 (7).png" alt="">
+            <img src="img/w175 (8).png" alt="">
+            <img src="img/w175 (9).png" alt="">
+            <img src="img/w175 (10).png" alt="">
+            <img src="img/w175 (11).png" alt="">
+            </div>
+			-->

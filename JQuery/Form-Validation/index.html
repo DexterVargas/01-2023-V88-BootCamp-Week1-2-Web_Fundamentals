@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<title>Form Validation</title>
+		<script>
+			$(document).ready(function(){
+                $( "#datepicker" ).datepicker();
+                $("#form-sched").submit(function(){
+                    console.log($("#location").val());
+                    if(!$("#datepicker").val()) {
+                      alert("Please select Vaccination date!");
+                    }
+                    else if($("#location").val() ==="blank") {
+                      alert("Please select Vaccination Venue!");
+                    }
+                    else if(!$("#firstname").val()) {
+                      alert("Please complete fields! Firstname:");
+                    }
+                    else if(!$("#lastname").val()) {
+                        alert("Please complete fields! Lastname:");
+                    }
+                    else if(!$("#age").val()) {
+                        alert("Please complete fields! Age:");
+                    }
+                    else if($("#vaccineType").val()==="blank") {
+                        alert("Please complete fields! Type of Vaccine:");
+                    }
+                    else if($("#dosage").val()==="blank") {
+                        alert("Please complete fields! Dosage:");
+                    }else{
+                        alert("Success! "+$("#firstname").val()+" "+$("#lastname").val()+" You are scheduled for "+$("#vaccineType").val()+" "+$("#dosage").val()+" @ "+$("#location").val()+" "+$("#datepicker").val()+" .");
+                    }
+                    return false;
+                });
+			});
+		</script>
+	</head>
+    <body>
+        <form id="form-sched" action="return false" method="post">
+            <h1>Scheduling Form for Vaccine</h1>
+            <label>*Date: <input type="text" id="datepicker"></label>
+            <p></p>
+            <label for="location">Vaccination Venue: </label>
+            <select id="location">
+                <option value="blank"></option>
+                <option value="Megamall">MegaMall</option>
+                <option value="Moa">MOA</option>
+                <option value="DOH">DOH MAIN OFICE</option>
+                <option value="Starmall">StarMall Shaw</option>
+                <option value="China">China</option>
+            </select>
+            <p></p>
+            <label>Firstname: <input type="text" name="firstname" id="firstname"></label>
+            <p></p>
+            <label>Lastname: <input type="text" name="lastname" id="lastname"></label>
+            <p></p>
+            <label>Age: <input type="number" name="age" id="age"></label>
+            <p></p>
+            <label for="vaccineType">Type of Vaccine</label>
+            <select id="vaccineType">
+                <option value="blank"></option>
+                <option value="sinovac">Sinovac</option>
+                <option value="pfizer">Pfizer</option>
+                <option value="astra">AstraZeneca</option>
+                <option value="sputnik">Sputnik Walastic</option>
+                <option value="moderna">Moderna</option>
+            </select>
+            <p></p>
+            <label for="dosage">Dosage:</label>
+            <select id="dosage">
+                <option value="blank"></option>
+                <option value="firstDose">First Dose</option>
+                <option value="secondDose">Second Dose</option>
+                <option value="firstBoost">First Booster</option>
+                <option value="secondBoost">Second Booster</option>
+                <option value="secondBoost">HOG Booster</option>
+            </select>
+            <p class="line-breaker"></p>
+            <input class="btn-submit" type="submit" value="Schedule Date!">
+        </form>
+    </body>
+</html>

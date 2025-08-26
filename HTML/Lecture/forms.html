@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>When the user needs to fill-up first name, last name:</h3>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" />
+
+  <h3>When asking our private information:</h3>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" />
+
+  <h3>When the user can choose only 1 option:</h3>
+  <h4>Can be radio buttons:</h4>
+  <label for="answer_yes">Yes, I accept the terms of condition</label>
+  <input type="radio" id="answer_yes" name="answer" value="yes" />
+  <label for="answer_no">No, I will not accept the terms of condition</label>
+  <input type="radio" id="answer_no" name="answer" value="no" />
+
+  <h4>Can be dropdown menu:</h4>
+  <select name="answer">
+    <option value="facebook">Facebook</option>
+    <option value="instagram">Instagram</option>
+    <option value="lyka">Lyka</option>
+  </select>
+
+  <h3>When the user can choose many options by checking the boxes:</h3>
+  <label for="passport">Passport</label>
+  <input type="checkbox" id="passport" name="valid_ids" value="passport" />
+  <label for="postal">Postal ID</label>
+  <input type="checkbox" id="postal" name="valid_ids" value="postal" />
+  <label for="tin">TIN ID</label>
+  <input type="checkbox" id="tin" name="valid_ids" value="tin" />
+
+  <h3>When the user might want to enter longer text:</h3>
+  <textarea name="suggestion">Type here long texts...</textarea>
+
+  <h3>Finally, to create a submit button:</h3>
+  <input type="submit" value="Submit" />
+</body>
+
+</html>

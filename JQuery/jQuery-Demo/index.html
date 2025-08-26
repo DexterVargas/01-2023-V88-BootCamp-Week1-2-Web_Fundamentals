@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>jQuery Codes</title>
+    <script>
+        $(document).ready(function(){
+            // jQuery codes here
+            $(".func-hide").click(function(){
+                $(".func-hide-execute").hide("slow");
+            });
+            $(".func-show").click(function(){
+                $(".func-hide-execute").show("slow");
+            });
+            $(".func-toggle").click(function(){
+                $(".func-hide-execute").toggle("slow",function(){
+                    $(".func-hide-execute").append("Toggle");
+                });
+            });
+
+
+            //css
+            $( "div" ).click(function() {
+                var color = $( this ).css( "background-color" );
+                $( "#result" ).html( "That div is <span style='color:" +
+                    color + ";'>" + color + "</span>." );
+            });
+
+        });
+    </script>
+      <style>
+        div {
+          width: 60px;
+          height: 60px;
+          margin: 5px;
+          float: left;
+        }
+        </style>
+</head>
+<body>
+    Study these tags only!
+Effects (functions to do some cool animation effects)
+<p>Click <span class="func-hide">.hide()</span> <span class="func-show">.show()</span> <span class="func-toggle">.toggle()</span> </p>
+<p class="func-hide-execute">THIS TEXT WILL HIDE. (eventually the code for this will show.)</p>
+.show()
+.toggle()
+.slideUp()
+.slideDown()
+.slideToggle()
+.fadeOut()
+.fadeIn()
+CSS (adding or removing a class for any HTML element/DOM)
+.addClass()
+.removeClass()
+.css()
+<span id="result">&nbsp;.CSS</span>
+<div style="background-color:blue;"></div>
+<div style="background-color:rgb(15,99,30);"></div>
+<div style="background-color:#123456;"></div>
+<div style="background-color:#f11;"></div>
+ 
+<script>
+
+</script>
+Manipulation (retrieving or setting value or text in any HTML element)
+.after()
+.append()
+.prepend()
+.attr()
+.before()
+.html()
+.text()
+.val()
+Events (functions to handle an event)
+.click()
+.on()
+.hover()
+Note that for the manipulation jQuery functions, there are few distinctions to make. The functions .html(), .text(), .append() are different in a key way:
+
+.html() can be used to get or replace with HTML markup inside, meaning new HTML tags. (Ex. replacing any existing elements inside div by paragraph)
+.text() is used to get or set just the text value of an HTML element. (Ex. text of a paragraph)
+.append() will add markup/tag inside the specific element (Ex. adding list item in ordered list)
+</body>
+</html>
